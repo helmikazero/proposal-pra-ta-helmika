@@ -32,34 +32,41 @@ Dari permasalahan yang disebutkan, dapat dapat ditentukan tujuan :
 
 \end{enumerate}
 
-\subsection{Batasan Masalah}
-\label{sec:batasanmasalah}
+% \subsection{Batasan Masalah}
+% \label{sec:batasanmasalah}
 
-Batasan-batasan dari pengembangan Deteksi Helm Keselmatan Kerja menggunakan CNN meliputi hal - hal berikut:
+% Batasan-batasan dari pengembangan Deteksi Helm Keselmatan Kerja menggunakan CNN meliputi hal - hal berikut:
 
-\begin{enumerate}[nolistsep]
+% \begin{enumerate}[nolistsep]
 
-  \item Diasumsikan sistem pengawasan diletakkan pada \emph{checkpoint} masuk kawasan konstruksi
+%   \item Diasumsikan sistem pengawasan diletakkan pada \emph{checkpoint} masuk kawasan konstruksi
 
-  \item Metode deteksi penggunaan helm keselematan kerja yang akan digunakan pada penelitian ini adalah \emph{You Only Look Once} (YOLO) versi 5 atau YOLOv5.
+%   \item Metode deteksi penggunaan helm keselematan kerja yang akan digunakan pada penelitian ini adalah \emph{You Only Look Once} (YOLO) versi 5 atau YOLOv5.
 
-  \item Jenis input yang akan digunakan untuk deteksi adalah input dari kamera yang diletakkan pada checkpoint masuk kawasan konstruksi.
-  \item Sistem hanya mendeteksi "kepala menggunakan helm" dan "kepala yang tidak mengenakan helm".
+%   \item Jenis input yang akan digunakan untuk deteksi adalah input dari kamera yang diletakkan pada checkpoint masuk kawasan konstruksi.
+%   \item Sistem hanya mendeteksi "kepala menggunakan helm" dan "kepala yang tidak mengenakan helm".
 
-\end{enumerate}
+% \end{enumerate}
 
 \subsection{Penelitian Terkait}
 \begin{enumerate}
-  \item Deep Learning Based Safety Helmet Detection in Engineering Management Based on Convolutional Neural Networks 
+  \item \emph{Deep Learning Based Safety Helmet Detection in Engineering Management Based on Convolutional Neural Networks} 
   \par Li dan teman teman pada tahun 2020 melakukan penelitian tentang metode deteksi helm keselamatan kerja secara real time berbasis deep learning pada lokasi konstruksi. Li dan teman – teman menggunakan SSD-MobileNet yang berbasis dari CNN. Menggunakan dataset yang berjumlah 3261 gambar helm keselamatan. SSD- Mobilenet dipilih dibanding R-CNN dengan maksud pendeteksian yang lebih cepat dan cocok untuk real – time walau tidak seakurat R-CNN. \cite{li2020deep}
   
   \item Deteksi Penggunaan Helm Pada Pengendara Bermotor Berbasis Deep Learning 
   \par Yusuf Umar pada tahun 2020 melakukan penelitian tentang deteksi penggunaan helm pada pengendara bermotor. Pada penelitiannya menggunakan YOLOv3 yang berbasis dari CNN. Pada sistem yang dikembangkan dapat memberikan bounding box ke pengendara lalu dalam bounding box pengendara terdapat boundbox lain dari kepala hingga dada pengendara untuk mendeteksi penggunaan helm motor ada atau tidak. \cite{hanafi2020deteksi}
+
+  \item \emph{Safety Helmet Detection Based on YOLOv5}
+  \par Zhou dan teman - teman pada awal tahun 2021 melakukan penelitian deteksi helm keselamatan kerja yang berbasis dari YOLOv5. Pada penelitiannya Zhou dan teman - teman melakukan perbandingan dengan 4 model dari YOLOv5 yang meliputi YOLOv5s, YOLOv5m, YOLOv5l, dan YOLOv5. Selain itu Zhou dan teman - teman menggunakan dataset yang berisi 6054 gambar yang dikumpulkan dari
+  internet dan di anotasi sendiri. Label anotasinya ada dua yaitu "Alarm" yang merupakan kepala tanpa helm dan
+  "helmet" yang merupakan kepala dengan helm keselamatan kerja\cite{zhou_zhao_nie_2021}.
 \end{enumerate}
 
 \subsection{Gap Penelitian}
-Pada penelitian Deep Learning-Based Safety Helmet Detection in Engineering Management Based on Convolutional Neural Networks oleh Li dan kawan - kawan , pendeteksian hanya mendeteksi helm keselamatannya sendiri tetapi belum mendeteksi personel yang tidak menggunakan helm keselamatan. Selain itu, Li dan kawan - kawan tidak menggunakan YOLO dalam penelitiannya dan memilih menggunakan SSD-MobileNet.
+Pada penelitian \emph{Deep Learning-Based Safety Helmet Detection in Engineering Management Based on Convolutional Neural Networks} oleh Li dan kawan - kawan , pendeteksian hanya mendeteksi helm keselamatannya sendiri tetapi belum mendeteksi personel yang tidak menggunakan helm keselamatan. Selain itu, Li dan kawan - kawan tidak menggunakan YOLO dalam penelitiannya dan memilih menggunakan SSD-MobileNet.
 \par Pada penelitian Deteksi Penggunaan Helm Pada Pengendara Bermotor Berbasis Deep Learning oleh Yusuf Umar hanya diimplementasikan pada deteksi helm pada pengendara bermotor dan belum untuk helm proyek. Sekiranya metode yang akan digunakan untuk pengembangan sama tetapi dataset yang digunakan akan berbeda.
+\par Pada penelitian \emph{Safety Helmet Detection Based on YOLOv5} oleh Zhou dan teman - teman melakukan deteksi pada pengguna helm keselamatan kerja dan yang tidak. Tetapi dari hasil deteksi ini belum ada tindak lanjut dari hasil output jika
+sekiranya terdapat personel yang tidak menggunakan helm keselamatan kerja. Selain itu, 
 
 % \section{Sistematika Penulisan}
 % \label{sec:sistematikapenulisan}
