@@ -1,138 +1,77 @@
 \section{TINJAUAN PUSTAKA}
+\label{chap:tinjauanpustaka}
 
-% Ubah konten-konten berikut sesuai dengan isi dari tinjauan pustaka
-Tujuan yang ingin dicapai dari Tugas Akhir ini adalah untuk mengembangkan sebuah model menggunakan 
-Convolutional Neural Network yang dapat mengestimasi umur, gender dan etnik yang mempermudah proses 
-pengumpulan dan pengambilan data terkait umur, gender dan etnik.
+% Ubah bagian-bagian berikut dengan isi dari tinjauan pustaka
 
-\subsection{Wajah}
+% Demi mendukung penelitian ini, \lipsum[1][1-5]
 
-% Contoh penggunaan referensi dari pustaka
-% Newton pernah merumuskan \citep{Newton1687} bahwa \lipsum[8]
-% Contoh penggunaan referensi dari persamaan
-% Kemudian menjadi persamaan seperti pada persamaan \ref{eq:FirstLaw}.
+% \section{Roket Luar Angkasa}
+% \label{sec:roketluarangkasa}
 
-Wajah merupakan bagian dari tubuh manusia yang menjadi fokus perhatian di dalam interaksi sosial, 
-wajah memainkan peranan vital dengan menunjukan identitas dan emosi. Kemampuan manusia untuk mengetahui 
-seseorang dari wajahnya sangat luar biasa. Kita dapat mengenali ribuan wajah karena frekuensi interaksi 
-yang sangat sering ataupun hanya sekilas bahkan dalam rentang waktu yang sangat lama. Bahkan kita mampu 
-mengenali seseorang walaupun terjadi perubahan pada orang tersebut karena bertambahnya usia atau 
-pemakaian kacamata atau perubahan gaya rambut. Oleh karena itu wajah digunakan sebagai organ dari tubuh 
-manusia yang dijadikan indikasi pengenalan seseorang. Dimana identitas, ekspresi, gender, umur dan etnik 
-disebut dengan dalam wajah.
+% % Contoh input gambar
+% \begin{figure}[ht]
+%   \centering
 
-\subsection{Umur}
-Umur merupakan rentang kehidupan yang diukur dengan tahun, dikatakan masa awal dewasa adalah usia 18 – 40 
-tahun, dewasa madya adalah 41 – 60 tahun, dewasa lanjut lebih dari 60 tahun. Umur adalah lamanya hidup 
-dalam tahun yang dihitung sejak dilahirkan.
-% input gambar
-\begin{figure} [H] \centering
-    % Nama dari file gambar yang diinputkan
-    \includegraphics[scale=0.6]{gambar/umur.png}
-    % Keterangan gambar yang diinputkan
-    \caption{Kategori umur menurut Depkes. RI (2009)}
-    % Label referensi dari gambar yang diinputkan
-    \label{fig:Umur}
-\end{figure}
+%   % Ubah dengan nama file gambar dan ukuran yang akan digunakan
+%   \includegraphics[scale=0.35]{gambar/roketluarangkasa.jpg}
 
-\subsection{Gender}
-Gender merupakan perbedaan yang terlihat antara laki-laki dan perempuan apabila dilihat dari penampilan 
-dan tingkah laku. Gender dapat didefinisikan sebagai keadaan dimana individu yang lahir secara biologis 
-sebagai laki-laki dan perempuan yang kemudian memperoleh pencirian sosial sebagai laki-laki dan perempuan 
-melalui atribut maskulinitas dan feminimitas yang diperlihatkan individu tersebut.
+%   % Ubah dengan keterangan gambar yang diinginkan
+%   \caption{Peluncuran roket luar angkasa \emph{Discovery} \citep{roketluarangkasa}.}
+%   \label{fig:roketluarangkasa}
+% \end{figure}
 
-\subsection{Etnis}
-Kata etnis mengacu pada suatu golongan atau kelompok manusia yang anggota - anggotanya mengidentifikasikan 
-dirinya dengan sesamanya, biasanya berdasarkan garis keturunan dan adat yang dianggap sama. Identitas 
-etnis ditandai oleh pengakuan dari orang lain akan ciri khas kelompok tersebut seperti kesamaan budaya, 
-bahasa, agama, perilaku, dan ciri-ciri biologis.
-% input gambar
-\begin{figure} [H] \centering
-    % Nama dari file gambar yang diinputkan
-    \includegraphics[scale=0.6]{gambar/etnik.png}
-    % Keterangan gambar yang diinputkan
-    \caption{Macam-macam Etnik di dunia}
-    % Label referensi dari gambar yang diinputkan
-    \label{fig:Etnik}
-\end{figure}
+% Roket luar angkasa merupakan \lipsum[1]
 
-\subsection{Visi Komputer}
-Visi komputer adalah bidang ilmiah interdisipliner yang membahas bagaimana komputer dapat memperoleh 
-pemahaman tingkat tinggi dari gambar atau video digital. Dari perspektif teknik, bidang ini berupaya 
-mengotomatiskan tugas-tugas yang dapat dilakukan oleh sistem pengelihatan  manusia. Tugas  penglihatan 
-komputer   meliputi metode untuk memperoleh, memproses, menganalisis dan memahami gambar digital, dan 
-ekstraksi data dimensi tinggi dari dunia nyata untuk menghasilkan informasi numerik atau simbolis, 
-misalnya dalam bentuk keputusan. Pengertian dalam konteks ini berarti transformasi gambar visual 
-(input retina) menjadi deskripsi mengenai dunia sekitar yang dapat berinteraksi dengan proses pemikiran 
-lain dan memperoleh tindakan yang sesuai. Pemahaman gambar ini dapat dilihat sebagai penguraian informasi 
-simbolik dari data gambar menggunakan model yang dibangun dengan bantuan geometri, fisika, statistik, dan 
-teori pembelajaran. Sub-domain dari pengelihatan komputer meliputi rekonstruksi adegan, deteksi peristiwa, 
-pelacakan video, pengenalan objek, estimasi pose 3D, pembelajaran, pengindeksan, estimasi gerakan, dan 
-pemulihan gambar[9].
-
-\subsection{Machine Learning}
-Machine Learning (ML) atau Pembelajaran Mesin merupakan bagian dari Artificial Intelligence (AI) yang 
-bertujuan untuk memberi optimalisasi dalam kriteria dengan cara menganalisa sampel data yang terdahulu 
-yang sudah disimpan atau direkam untuk menghasilkan sebuah prediksi. Sehingga manusia tidak perlu 
-mengindentifikasi sebuah proses sepenuhnya, karena dengan Machine Learning, komputer mampu membuat pola 
-untuk membuat keputusan. Machine Learning melakukan training yang merupakan proses pembelajaran terhadap 
-model data yang sudah terdefinisikan ke beberapa parameter (data training) yang menghasilkan beberapa 
-pola sehingga komputer dapat melakukan proses klasifikasi berdasarkan pola atau ciri-ciri yang sudah 
-didapatkan dalam proses training. Kemudian komputer dapat memberikan sebuah prediksi pada data baru 
-selanjutnya berdasarkan hasil training. Machine Learning dapat memberi solusi dalam berbagai permasalahan
- seperti Computer Vision (Visi Komputer), Speech Recognition (Pengenalan Suara) dan Robotics (Robotika)[10].
+% \emph{Discovery}, Gambar \ref{fig:roketluarangkasa}, merupakan \lipsum[2]
 
 \subsection{Deep Learning}
- Deep Learning merupakan artificial neural network yang memiliki banyak layer dan synapse weight. 
- Deep learning dapat menemukan relasi tersembunyi atau pola yang rumit antara input dan output, yang 
- tidak dapat diselesaikan menggunakan multilayer perceptron. Keuntungan  utama  deep  learning  yaitu 
- mampu merubah data dari nolinearly separable menjadi linearly separable melalui serangkaian transformasi 
- (hidden layers). Selain itu, deep learning juga mampu mencari decision boundary yang berbentuk non-linier
- , serta mengsimulasikan interaksi non-linier antar fitur. Jadi, input ditransformasikan secara 
- non-linier sampai akhirnya pada output, berbentuk distribusi class-assignment[11].
+\label{sec:deeplearning}
 
- \begin{figure} [H] \centering
-    % Nama dari file gambar yang diinputkan
-    \includegraphics[scale=0.6]{gambar/deeplearning.png}
-    % Keterangan gambar yang diinputkan
-    \caption{Deep Learning 4 layer}
-    % Label referensi dari gambar yang diinputkan
-    \label{fig:Deep Learning}
-\end{figure}
+Deep Learning sejatinya bagian machine learning yang dimana algoritma nya terinspirasi dari cara kerja jaringan neuron seperti halnya jaringan neuron pada otak manusia. Pada deep learning, syaraf atau neuron merupakan perwakilan dari satu fungsi yang menyimpan suatu nilai atau value yang dimana neuron - neuron ini berada dalam layer - layer yang dimana antar layer memiliki hubungan tertentu. Deep Learning digunakan karena kemampuanya untuk menemukan relasi yang tidak ditemukan antara input dan output. \cite{Goodfellow-et-al-2016}
 
-\subsection{Convolutional Neural Network (CNN)}
-Convolutional Neural Network (CNN) merupakan cabang dari Multilayer Perceptron (MLP) yang digunakan untuk
-mengolah data dua dimensi. CNN memiliki kedalaman jaringan yang tinggi sehingga CNN termasuk dalam jenis
-Deep Neural Network. Perbedaan CNN dengan MLP terdapat pada neuron dimana pada MLP setiap neuron hanya
-berukuran satu dimensi, sedangkan CNN setiap neuronnya berukuran dua dimensi. Pada CNN, operasi linier
-menggunakan operasi konvolusi[12].
+% \emph{Discovery}, Gambar \ref{fig:roketluarangkasa}, merupakan \lipsum[2]
 
-\subsection{Image Processing}
-Image Processing atau Pengolahan Citra merupakan teknik dalam pemrosesan gambar dengan input berupa 
-citra dua dimensi yang bertujuan untuk menyempurnakan citra atau mendapatkan informasi yang berguna 
-untuk diolah menjadi beberapa keputusan. Dalam operasi pemrosesan citra, operasi yang sering dilakukan 
-dalam format gambar grayscale. Gambar grayscale didapatkan dari pemrosesan gambar berwarna yang 
-didekomposisi menjadi komponen merah (R), hijau (G) dan biru (B) yang diproses secara independen sebagai 
-gambar grayscale. Image Processing terbagi menjadi dalam tiga tingkatan[13]:
-    \begin{enumerate}
-        \item Low-Level Image Processing \\
-        Low-Level Image Processing merupakan operasi sederhana dalam pengolahan gambar dimana input dan 
-        output berupa gambar. Contoh: contrast enchancement dan noise reduction.
-        \item Mid-Level Image Processing \\
-        Mid-Level Image Processing merupakan operasi pengolahan gambar yang melibatkan ekstrasi atribut dari 
-        gambar input. Contoh: edges, contours dan regions.
-        \item High-Level Image Processing \\
-        High-Level Image Processing merupakan merupakan kategoriyang melibatkan pemrosesan gambar kompleks 
-        yang terkait dengan analisis dan interpretasi konten dalam sebuah keadaan untuk pengambilan keputusan.
-    \end{enumerate}
+\subsection{Convolutional Neural Network}
+\label{sec:convolutionalneuralnetwork}
 
-\subsection{Digital Image}
-Digital Image merupakan fungsi dua dimensi f(x,y) yang merupakan proyeksi dari bentuk tiga dimensi kedalam 
-bentuk dua dimensi dimana x dan y merupakan lokasi elemen gambar atau piksel yang berisikan nilai. Ketika
-nilai x,y dan intensitasnya berupa diskrit, maka gambar tersebut dapat dikategorikan sebagai digital
-image. Secara matematis, digital image adalah representasi matriks dari gambar dua dimensi menggunakan
-piksel. Setiap piksel  diwakili  oleh  nilai  numerik. Untuk  gambar  grayscale,  hanya  memiliki  
-satu  nilai dengan kisaran antara 0-255.Pada Gambar 2.5, untuk gambar yang berwarna, memiliki tiga 
-nilai yang mewakili merah (R), hijau (G) dan biru (B) yang masing-masing memiliki kisaran nilai yang 
-sama antara 0-255. Jika suatu gambar hanya memiliki dua intensitas, gambar tersebut dikenal sebagai 
-binary image[13].
+Convolutional Neural Network adalah metode deep learning yang didesain untuk rekognisi pada data dua dimensi yang dimana umumnya berupa gambar visual (tetapi tidak harus berupa gambar) dan untuk klasifikasi. Deep Learning dapat mengatasi masalah dimana terdapat terlalu banyak parameter.  Layer yang biasanya ada di dalam CNN yaitu input layer, convolutional layer, activation layer, dan fully connected layer.
+Convolutional layer dan pooling layer merupakan bagian utama pada CNN. Layer - layer tersebut dapat menemukan karakteristik dari objek. Convolutional layer memiliki kapabilitas untuk menemukan dan meningkatkan fitur/karakteristik objek sedangkan pooling layer mampu menyaring fitur fitur yang ditemukan dengan menghapus layer yang tidak diperlukan atau meng-compress fitur. Activation layer memanfaatkan aktivasi non linear untuk meningkatkan expression ability dari model neural network. Fully Connected layer berfungsi untuk menggabungkan fitur - fitur objek dengan nilai output fitur. \cite{Goodfellow-et-al-2016}
+
+% \subsection{Hukum Newton}
+% \label{subsec:hukumnewton}
+
+% Newton \citep{newton1687} pernah merumuskan bahwa \lipsum[1]
+% Kemudian menjadi persamaan seperti pada persamaan \ref{eq:hukumpertamanewton}.
+
+% % Contoh pembuatan persamaan
+% \begin{equation}
+%   \label{eq:hukumpertamanewton}
+%   \sum \mathbf{F} = 0\; \Leftrightarrow\; \frac{\mathrm{d} \mathbf{v} }{\mathrm{d}t} = 0.
+% \end{equation}
+
+% \subsection{Anti Gravitasi}
+% \label{subsec:antigravitasi}
+
+% Anti gravitasi merupakan \lipsum[1]
+
+
+\subsection{Visi Komputer}
+\label{sec:visikomputer}
+
+Convolutional Neural Network adalah metode deep learning yang didesain untuk rekognisi pada data dua dimensi yang dimana umumnya berupa gambar visual (tetapi tidak harus berupa gambar) dan untuk klasifikasi. Deep Learning dapat mengatasi masalah dimana terdapat terlalu banyak parameter.  Layer yang biasanya ada di dalam CNN yaitu input layer, convolutional layer, activation layer, dan fully connected layer.
+Convolutional layer dan pooling layer merupakan bagian utama pada CNN. Layer - layer tersebut dapat menemukan karakteristik dari objek. Convolutional layer memiliki kapabilitas untuk menemukan dan meningkatkan fitur/karakteristik objek sedangkan pooling layer mampu menyaring fitur fitur yang ditemukan dengan menghapus layer yang tidak diperlukan atau meng-compress fitur. Activation layer memanfaatkan aktivasi non linear untuk meningkatkan expression ability dari model neural network. Fully Connected layer berfungsi untuk menggabungkan fitur - fitur objek dengan nilai output fitur. \cite{Goodfellow-et-al-2016}
+
+\subsection{You Only Look Once (YOLO)}
+\label{sec:youonlylookone}
+
+You Only Look Once adalah algoritma yang memiliki kemampuan untuk mendeteksi dan mengenal 
+objek yang ada di suatu gambar yang dimana hanya memerlukan satu propagasi di neural network. 
+YOLO menggunakan CNN untuk melakukan deteksi objek secara real time. 
+Dengan menggunakan YOLO berarti untuk melakukan deteksi pada suatu gambar hanya memerlukan 
+sekali run .\cite{adiwibowo2020deteksi}
+
+
+\subsection{Helm Keselamatan Kerja}
+\label{sec:helmkeselamatankerja}
+
+Helm Keselamatan Kerja atau yang kadang disebut Helm Proyek atau Hardhat  dalam bahasa inggris berfungsi sebagaimana helm pada umumnya berfungsi yaitu untuk melindungi kepala penggunanya. Berbeda dengan helm lainnya seperti helm motor atau helm militer, helm proyek digunakan umumnya pada proyek konstruksi untuk melindungi pekerja dari hantaman ke kepala saat terjatuh atau tertimpa benda berat yang dimana sering terjadi di wilayah konstruksi. \cite{safeopedia_2018}
