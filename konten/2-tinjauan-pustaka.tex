@@ -24,21 +24,76 @@
 
 % \emph{Discovery}, Gambar \ref{fig:roketluarangkasa}, merupakan \lipsum[2]
 
-\subsection{Deep Learning}
-\label{sec:deeplearning}
+% \subsection{Deep Learning}
+% \label{sec:deeplearning}
 
-Deep Learning sejatinya bagian machine learning yang dimana algoritma nya terinspirasi dari cara kerja jaringan neuron seperti 
-halnya jaringan neuron pada otak manusia. Pada deep learning, syaraf atau neuron merupakan perwakilan dari satu fungsi yang 
-menyimpan suatu nilai atau value yang dimana neuron - neuron ini berada dalam layer - layer yang dimana antar layer memiliki 
-hubungan tertentu. Deep Learning digunakan karena kemampuanya untuk menemukan relasi yang tidak ditemukan antara input dan output. \cite{Goodfellow-et-al-2016}
+% Deep Learning sejatinya bagian machine learning yang dimana algoritma nya terinspirasi dari cara kerja jaringan neuron seperti 
+% halnya jaringan neuron pada otak manusia. Pada deep learning, syaraf atau neuron merupakan perwakilan dari satu fungsi yang 
+% menyimpan suatu nilai atau value yang dimana neuron - neuron ini berada dalam layer - layer yang dimana antar layer memiliki 
+% hubungan tertentu. Deep Learning digunakan karena kemampuanya untuk menemukan relasi yang tidak ditemukan antara input dan output. \cite{Goodfellow-et-al-2016}
+
+% Deep Learning adalah bagian dari machine learning yang dimana juga merupakan bagian dari artificial intelligence yang dimana memiliki metode
+% yang lebih tradisional untuk untuk melakukan aksi berdasarkan data. Deep learning adalah teknik machin learning yang dimana mempelajari
+% fitur dan tugas langsung dari data dengan cara menyalurkan input melewati neural network yangn mempunyai hidden layer.
+
+
 
 % \emph{Discovery}, Gambar \ref{fig:roketluarangkasa}, merupakan \lipsum[2]
 
 \subsection{Convolutional Neural Network}
 \label{sec:convolutionalneuralnetwork}
 
-Convolutional Neural Network adalah metode deep learning yang didesain untuk rekognisi pada data dua dimensi yang dimana umumnya berupa gambar visual (tetapi tidak harus berupa gambar) dan untuk klasifikasi. Deep Learning dapat mengatasi masalah dimana terdapat terlalu banyak parameter.  Layer yang biasanya ada di dalam CNN yaitu input layer, convolutional layer, activation layer, dan fully connected layer.
-Convolutional layer dan pooling layer merupakan bagian utama pada CNN. Layer - layer tersebut dapat menemukan karakteristik dari objek. Convolutional layer memiliki kapabilitas untuk menemukan dan meningkatkan fitur/karakteristik objek sedangkan pooling layer mampu menyaring fitur fitur yang ditemukan dengan menghapus layer yang tidak diperlukan atau meng-compress fitur. Activation layer memanfaatkan aktivasi non linear untuk meningkatkan expression ability dari model neural network. Fully Connected layer berfungsi untuk menggabungkan fitur - fitur objek dengan nilai output fitur. \cite{Goodfellow-et-al-2016}
+% Convolutional Neural Network adalah metode deep learning yang didesain untuk rekognisi pada data dua 
+% dimensi yang dimana umumnya berupa gambar visual (tetapi tidak harus berupa gambar) dan untuk klasifikasi. 
+% Deep Learning dapat mengatasi masalah dimana terdapat terlalu banyak parameter.  
+% Layer yang biasanya ada di dalam CNN yaitu input layer, convolutional layer, activation layer, dan fully cted layer.
+% Convolutional layer dan pooling layer merupakan bagian utama pada CNN. Layer - layer tersebut dapat 
+% menemukan karakteristik dari objek. Convolutional layer memiliki kapabilitas untuk menemukan dan 
+% meningkatkan fitur/karakteristik objek sedangkan pooling layer mampu menyaring fitur fitur yang
+% ditemukan dengan menghapus layer yang tidak diperlukan atau meng-compress fitur. Activation layer
+% memanfaatkan aktivasi non linear untuk meningkatkan expression ability dari model neural network. 
+% Fully Connected layer berfungsi untuk menggabungkan fitur - fitur objek dengan nilai output fitur. \cite{Goodfellow-et-al-2016}
+
+
+Convolutional Neural Network adalah metode deep learning yang didesain untuk rekognisi pada data dua 
+dimensi yang dimana umumnya berupa gambar visual (tetapi tidak harus berupa gambar) dan untuk klasifikasi.
+Convolutional Neural Network memiliki kedalaman jaringan yang tinggi sehingga juga bisa termasuk sebagai \emph{Deep Neural Network}.
+Jika dibandingan dengan \emph{Multilayer Perceptron} atau MLP, kemampuan CNN untuk klasifikasi citra lebih baik dibandingkan dengan MLP karena MLP tidak memiliki
+kemampuan untuk menyimpan \emph{spatial information} dari gambar dimana satu \emph{pixel} pada gambar dianggap sebagai satu fitur
+terpisah atau independen.
+
+\par CNN dan MLP memiliki kemiripan dalam segi cara kerja. Perbedaan utama dari CNN dengan MLP adalah fakta
+dimana CNN merepresentasikan neuron dalam bentuk 2D atau dua dimensi sedangkan pada MLP satu dimensi.
+Seperti di MLP, CNN memiliki beberapa jumlah layer dengan masing - masing layer memiliki beberapa neuron.
+Lalu masing - masing hubungan antar neuron di antara layer memiliki nilai bobot yang berada dalam bentuk empat dimensi
+yang dimana merupakan kumpulan kernel konvolusi. Nilai bobot ini digunakan untuk melakukan operasi linear 
+dari input yang dimana hasilnya ditransformasi untuk menjadi funsi aktivasi. Nama "\emph{Convolution}" pada 
+CNN diambil dari operasi linearnya yang menggunakan operasi konvolusi \cite{putra2016klasifikasi}.
+Pada arsitektur CNN, terdapat beberapa jenis layer yaitu \emph{Convolution Layer, Subsampling Layer, 
+Fully Connected Layer}, dan \emph{Activation Layer}.
+
+\par Operasi konvolusi dilakukan pada \emph{Convolution Layer}. Dengan begitu \emph{Convolution Layer} merupakan
+layer utama dari CNN. Pada pengolahan gambar di CNN, terjadi proses penggunaan kernel pada gambar yang diinputkan.
+Kernel berkerja seperti memindai dari dari atas kiri ke kanan bawah gambar. Proses ini sebenarnya adalah aplikasi 
+dari operasi konvolusi. Konvolusi merupakan pengaplikasian sebuah fungsi di suatu output secara berulang. Tujuan
+diberlakukannya hal ini yaitu untuk mendapatkan fitur dari input gambar yang dimana konvolusinya akan menghasilkan]
+transformasi linear dari data. Bobot disini dapat diartikan sebagai spesifikasi dari kernel konvolusi yang digunakan yang
+dimaksudkan untuk kernal dapat dilatih berdasarkan input yang diterima.
+
+\par Subsampling Layer merupakan tempat proses reduksi ukuran data dari suatu gambar atau citra. Tujuannya selain mengecilkan
+ukurannya yaitu meningkatkan invariasi dari posisi fitur. Pada umunya metode Max Pooling yang sering digunakan pada proses sub sampling ini.
+Max Pooling membagi keluaran dari convolution layer menjadi grid kecil yang dimana disini diambil \emph{max value}-nya dari dari setiap grid
+tadi yang digunakan untuk menyusun gambar citra yang sudah tereduksi. Menurut Springenberg et al. \cite{springenberg2014striving}, pooling layer ini digunakan
+untuk mereduksi gambar sehingga lebih mudah digantikan sebuah convolution layer dengan stride yang sama dengan pooling layer
+bersangkutan\cite{putra2016klasifikasi}.
+
+\par Fully Connected Layer digunakan untuk melakukan transformasi untuk dilakukan klasifikasi secara linear.
+Neuron yang akan diinputkan ke FC layer ini harus ditransformasikan menjadi satu dimensi yang dimana
+mengakibatkan FC layer ini hanya bisa diletakkan di akhir jaringan karena data kehilangan \emph{spatial information}-nya
+sehingga menjadi \emph{irreversible} atau tidak bisa dikembalikan.
+
+\par Activation Layer adalah tempat dilakukannya fungsi aktivasi dimana dilakukan transformasi data input
+menjadi dimensi tinggi agar memungkinakan untuk dilakukan klasifikasi\cite{putra2016klasifikasi}.
 
 % \subsection{Hukum Newton}
 % \label{subsec:hukumnewton}
@@ -61,17 +116,22 @@ Convolutional layer dan pooling layer merupakan bagian utama pada CNN. Layer - l
 \subsection{Visi Komputer}
 \label{sec:visikomputer}
 
-Convolutional Neural Network adalah metode deep learning yang didesain untuk rekognisi pada data dua dimensi yang dimana umumnya berupa gambar visual (tetapi tidak harus berupa gambar) dan untuk klasifikasi. Deep Learning dapat mengatasi masalah dimana terdapat terlalu banyak parameter.  Layer yang biasanya ada di dalam CNN yaitu input layer, convolutional layer, activation layer, dan fully connected layer.
-Convolutional layer dan pooling layer merupakan bagian utama pada CNN. Layer - layer tersebut dapat menemukan karakteristik dari objek. Convolutional layer memiliki kapabilitas untuk menemukan dan meningkatkan fitur/karakteristik objek sedangkan pooling layer mampu menyaring fitur fitur yang ditemukan dengan menghapus layer yang tidak diperlukan atau meng-compress fitur. Activation layer memanfaatkan aktivasi non linear untuk meningkatkan expression ability dari model neural network. Fully Connected layer berfungsi untuk menggabungkan fitur - fitur objek dengan nilai output fitur. \cite{Goodfellow-et-al-2016}
+Visi Komputer adalah bidang ilmu yang mempelajari cara untuk memproses gambar terutama dalam meniru
+kemampuan manusia dalam melihat. Kemampuan seperti rekognisi wajah hingga bentuk kemampuan lain yang bahkan
+melebihi kemampuan manusia. Kebanyakan riset dari bidang visi komputer di \emph{deep learning} berfokus pada
+pengenalan objek atau deteksi. Bentuknya dari pengenalan atau deteksi ini bisa meliputi membuat log atau laporan
+objek apa saja yang ada dalam gambar hingga memberi penandaan pada objek yang terdeteksi \cite{Goodfellow-et-al-2016}. 
 
 \subsection{You Only Look Once (YOLO)}
 \label{sec:youonlylookone}
 
-You Only Look Once adalah algoritma yang memiliki kemampuan untuk mendeteksi dan mengenal 
-objek yang ada di suatu gambar yang dimana hanya memerlukan satu propagasi di neural network. 
-YOLO menggunakan CNN untuk melakukan deteksi objek secara real time. 
-Dengan menggunakan YOLO berarti untuk melakukan deteksi pada suatu gambar hanya memerlukan 
-sekali run .\cite{adiwibowo2020deteksi}
+\emph{You Only Look Once} atau YOLO adalah algoritma \emph{muti object detection} yang sangat cepat yang dicetuskan oleh Redmot et al pada tahun 2015
+lewat buku mereka \emph{You Only Look Once: Unified, Real-Time Object Detection}\cite{redmon2016you}. Convolutional Neural Network menjadi basis dari sistem deteksi YOLO ini.
+YOLO melakukan deteksi objek dengan menganggap nya sebagai pemrasalahan regresi tunggal yang diambil langsung dari \emph{pixel - pixel} yang ada
+di gambar menjadi \emph{bounding box} penanda dari koordinat - koordinat dan probabilitas dari klasifikasinya. Dengan begitu
+hanya perlu dilakukan satu kali pengecekan pada gambar untuk melakukan deteksi atau indentifikasi. \cite{redmon2016you}
+
+
 
 
 \subsection{Helm Keselamatan Kerja}
