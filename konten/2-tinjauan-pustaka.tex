@@ -40,6 +40,16 @@
 
 % \emph{Discovery}, Gambar \ref{fig:roketluarangkasa}, merupakan \lipsum[2]
 
+
+\subsection{Helm Keselamatan Kerja}
+\label{sec:helmkeselamatankerja}
+
+Helm Keselamatan Kerja atau yang kadang disebut Helm Proyek atau Hardhat  dalam bahasa 
+inggris berfungsi sebagaimana helm pada umumnya berfungsi yaitu untuk melindungi kepala 
+penggunanya. Berbeda dengan helm lainnya seperti helm motor atau helm militer, helm proyek 
+digunakan umumnya pada proyek konstruksi untuk melindungi pekerja dari hantaman ke kepala 
+saat terjatuh atau tertimpa benda berat yang dimana sering terjadi di wilayah konstruksi. \cite{safeopedia_2018}
+
 \subsection{Convolutional Neural Network}
 \label{sec:convolutionalneuralnetwork}
 
@@ -130,11 +140,18 @@ lewat buku mereka \emph{You Only Look Once: Unified, Real-Time Object Detection}
 YOLO melakukan deteksi objek dengan menganggap nya sebagai pemrasalahan regresi tunggal yang diambil langsung dari \emph{pixel - pixel} yang ada
 di gambar menjadi \emph{bounding box} penanda dari koordinat - koordinat dan probabilitas dari klasifikasinya. Dengan begitu
 hanya perlu dilakukan satu kali pengecekan pada gambar untuk melakukan deteksi atau indentifikasi. \cite{redmon2016you}
+YOLO menggabungkan beberapa komponen dari teksi objek menjadi satu neural network yang dimana menggunakan fitu-fitur
+dari seluruh bagian gambar untuk memprediksi tiap \emph{bounding box} sekaligus melakukan prediksi untuk semua
+\emph{bounding box} di semua tipe klasifikasi yang ada. Desain dari YOLO ini memungkinkan untuk melakukan
+\emph{end to end training} dan kecepatan deteksi \emph{real time}.
 
+\par Sistem dari YOLO sendiri membagi input gambar menjadi grid S x S. Grid disini perannya untuk 
+nanti yaitu jika grid tertentu menjadi pusat dari objek maka grid tersebut yang nantinya berguna untuk deteksi objek tadi.
 
+\par Setiap grid memprediksi tiap bound box dan nilai kemungkinan klasifikasi atau \emph{confidence score} dari \emph{bounding box} tersebut.
+Nilai tersebut mewakili seberapa "yakin" model akan objek yang terdeteksi di bounding box dan seberapa akurat
+prediksinya. 
 
-
-\subsection{Helm Keselamatan Kerja}
-\label{sec:helmkeselamatankerja}
-
-Helm Keselamatan Kerja atau yang kadang disebut Helm Proyek atau Hardhat  dalam bahasa inggris berfungsi sebagaimana helm pada umumnya berfungsi yaitu untuk melindungi kepala penggunanya. Berbeda dengan helm lainnya seperti helm motor atau helm militer, helm proyek digunakan umumnya pada proyek konstruksi untuk melindungi pekerja dari hantaman ke kepala saat terjatuh atau tertimpa benda berat yang dimana sering terjadi di wilayah konstruksi. \cite{safeopedia_2018}
+\par Terdapat lima nilai prediksi yang ada pada tiap bounding box yaitu : x, y, w, h, dan \emph{confidence}.
+X dan Y mewakili pusat dari bounding box. W dan H mewakili \emph{Weight} dan \emph{Height} diprediksi relatif
+dari seluruh gambar. Lalu \emph{confidence score} sendiri mewakili IOU antara \emph{predicted box} dan \emph{ground truth box} \cite{redmon2016you}.
