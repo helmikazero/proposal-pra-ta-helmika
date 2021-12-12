@@ -64,7 +64,7 @@
   \item Pelabelan Dataset
   \par Gambar - gambar yang sudah dikumpulkan dan dijadikan dataset perlu diberi pelabelan untuk masing - masing kelas atau label. Pada penelitian ini, label yang dibuat berjumlah 2 yaitu 
   "head" dan "helmet". Pemberian bounding box untuk label \emph{"head"} meliputi dari ujung kepala (rambut) hingga leher dan untuk label \emph{"helmet"} meliputi seluruh bagian helm 
-  keselamatan kerja hingga leher. Anotasi dari pelabelan akan disimpan kedalam format yang diterima oleh YOLOv5 yaitu format PyTorch yang disimpan dalam file .txt dan .yaml untuk \emph{config}.
+  keselamatan kerja hingga leher. Untuk penelitian ini, helm yang akan dideteksi sebagai label "helm" yaitu helm keselamatan kerja. Anotasi dari pelabelan akan disimpan kedalam format yang diterima oleh YOLOv5 yaitu format PyTorch yang disimpan dalam file .txt dan .yaml untuk \emph{config}.
   Proses pelabelan pada gambar hanya dilakukan pada gambar atau dataset yang belum memiliki pelabelan. Pada dataset yang sudah didapatkan pada penulisan proposal ini, \emph{Safety helmet detection} oleh andrewmvd, sudah memiliki
   pelabelan.
   \par Pelabelan dilakukan menggunakan Roboflow menggunakan fitur \emph{Annotate}. Fitur \emph{Annotate} dari Roboflow memberikan kemudahan ke pengguna dimana pengguna hanya perlu men-drag bounding
@@ -86,10 +86,18 @@
   Proses training akan dilakukan di hardware milik penulis dan/atau menggunakan \emph{Google Colab}.
 
   \item Pengembangan Sistem
-  \par Perlu dilakukannya pengembangan sistem yang dapat menerima input video real time dari kamera yang lalu dapat melakukan identifikasi penggunaan helm dan tidak yang dimana dilakukan dengan menggunakan model yang sudah dibuat.
+  \par Perlu dilakukannya pengembangan sistem yang dapat menerima input video real time dari kamera yang lalu dapat melakukan identifikasi penggunaan helm dan tidak yang dimana dilakukan
+  dengan menggunakan model yang sudah dibuat. Sistem yang akan menajalankan bobot yang dihasilkan dari training menggunakan YOLOv5 akan dikembangkan dengan asumsi :
+  \begin{enumerate}
+    \item Jenis input yang akan digunakan untuk deteksi oleh sistem adalah \emph{live-feed} dari kamera.
+    \item Kamera yang digunakan untuk mengawasi diletakkan pada checkpoint masuk ke lokasi utama konstruksi dimana outlet listrik umumnya ada pada suatu lokasi konstruksi.
+    \item Sistem akan dijalankan pada suatu komputer yang berada di lokasi konstruksi.
+    \item Sistem akan memicu atau men-\emph{trigger} suatu mekanisme alarm.
+  \end{enumerate} 
 
   \item Implementasi
-  \par Sistem yang sudah akan dikerahkan pada pengaplikasian dunia nyata seperti pada proyek konstruksi
+  \par Sistem yang selesai dikembangkan akan diimplementasikan untuk melakukan deteksi pada manusia yang menggunakan helm dan yang tidak dengan input dari kamera atau web cam yang mengirimkan input live-feed.
+  Implementasinya juga akan dilakukan pada lokasi konstruksi nyata jika memungkinkan.
 
   \item Pengujian dan Evaluasi
   \par Dari proses implementasi akan dilakukan pengujian keberhasilan dan keefektifan sistem saat dikerahkan pada implementasi dunia nyata.
