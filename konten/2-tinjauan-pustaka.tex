@@ -1,5 +1,5 @@
 \section{TINJAUAN PUSTAKA}
-\label{chap:tinjauanpustaka}
+\label{sec:tinjauanpustaka}
 
 % Ubah bagian-bagian berikut dengan isi dari tinjauan pustaka
 
@@ -42,7 +42,14 @@
 
 
 \subsection{Helm Keselamatan Kerja}
-\label{sec:helmkeselamatankerja}
+\label{subsec:helmkeselamatankerja}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.7]{gambar/safety_helmet.jpg}
+    \caption{Helm Keselamatan Kerja}
+    \label{fig:helmkeselamatankerja}  
+  \end{figure}
 
 Helm Keselamatan Kerja seperti helm atau pelindung kepala pada umumnya memiliki kemampuan untuk 
 melindungi kepala pengguna. Menurut surat dari Menteri Tenaga Kerja dan Trasmihrasi nomor PER. PER. 08/MENVIII/2010, 
@@ -67,7 +74,7 @@ Selain dari 2 tipe perlindungan dari benturan, standardisasi ANSI/ISEA Z89.1-201
 Dari situ dapat disimpulkan bahwa helm keselamatan kerja memiliki manfaat yang besar dalam melindungi kepala personel konstruksi.
 
 \subsection{Convolutional Neural Network}
-\label{sec:convolutionalneuralnetwork}
+\label{subsec:convolutionalneuralnetwork}
 
 % Convolutional Neural Network adalah metode deep learning yang didesain untuk rekognisi pada data dua 
 % dimensi yang dimana umumnya berupa gambar visual (tetapi tidak harus berupa gambar) dan untuk klasifikasi. 
@@ -140,7 +147,7 @@ menjadi dimensi tinggi agar memungkinakan untuk dilakukan klasifikasi\cite{putra
 
 
 \subsection{Visi Komputer}
-\label{sec:visikomputer}
+\label{subsec:visikomputer}
 
 Visi Komputer adalah bidang ilmu yang mempelajari cara untuk memproses gambar terutama dalam meniru
 kemampuan manusia dalam melihat. Kemampuan seperti rekognisi wajah hingga bentuk kemampuan lain yang bahkan
@@ -149,7 +156,7 @@ pengenalan objek atau deteksi. Bentuknya dari pengenalan atau deteksi ini bisa m
 objek apa saja yang ada dalam gambar hingga memberi penandaan pada objek yang terdeteksi \cite{Goodfellow-et-al-2016}. 
 
 \subsection{You Only Look Once (YOLO)}
-\label{sec:youonlylookone}
+\label{subsec:youonlylookone}
 
 \emph{You Only Look Once} atau YOLO adalah algoritma \emph{muti object detection} yang sangat cepat yang dicetuskan oleh Redmot et al pada tahun 2015
 lewat buku mereka \emph{You Only Look Once: Unified, Real-Time Object Detection}\cite{redmon2016you}. Convolutional Neural Network menjadi basis dari sistem deteksi YOLO ini.
@@ -171,3 +178,19 @@ prediksinya.
 \par Terdapat lima nilai prediksi yang ada pada tiap bounding box yaitu : x, y, w, h, dan \emph{confidence}.
 X dan Y mewakili pusat dari bounding box. W dan H mewakili \emph{Weight} dan \emph{Height} diprediksi relatif
 dari seluruh gambar. Lalu \emph{confidence score} sendiri mewakili IOU antara \emph{predicted box} dan \emph{ground truth box} \cite{redmon2016you}.
+
+\subsubsection{YOLOv5}
+\label{subsubsec:yolov5}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.5]{gambar/yolov5 structure.png}
+    \caption{Struktur Jaringan YOLOv5}
+    \label{fig:yolov5network}  
+\end{figure}
+
+\par YOLOv5 merupakan versi pembaruan dari YOLO yang dicetuskan pada tahun 2020 oleh Glenn Jocher \cite{glenn_jocher_yolov5}. Berdasarkan dari \emph{repository} Github untuk YOLOv5 oleh Glenn Jocher, struktur jaringan dari YOLOv5 dibagi menjadi 3 bagian utama yaitu modul \emph{Backbone}, \emph{Neck}, dan \emph{Head}.
+Seperti yang dapat dilihat di Gambar \ref{fig:yolov5network} Struktur jaringan dari YOLOv5 ini dimulai dari modul \emph{Backbone} dimana dilewati pertama oleh input gambar untuk mengekstrak fitur - fitur dari gambar yang strukturnya berbasis dari struktur \emph{Focus}, \emph{Bottleneck CSP (Cross Stage Partinal Networks)}, dan \emph{Spatial Pyramid Pooling (SPP)}.
+Hasil ekstraksi fitur dari \emph{Backbone} lalu digunakan untuk menghasilkan \emph{feature pyramid} di modul \emph{Neck} yang merupakan struktur yang berbasis dari PANet (\emph{Path Aggregation Network}).
+Lalu terakhir di Modul \emph{Head} dilakukan penampilan \emph{bounding box} yang meliputi beberapa informasi yaitu : kelas, koordinat, dan \emph{confidence score}.
+
