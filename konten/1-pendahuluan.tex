@@ -13,25 +13,35 @@ Medan dari proyek konstruksi dapat dianggap sebagai lingkungan yang penuh dengan
 Helm keselamatan kerja atau \emph{Hardhat} dalam Bahasa inggris atau juga kadang disebut Helm proyek merupakan salah satu bentuk APD K3 yang berfungsi untuk melindungi kepala pengguna dari benturan. Bentuk benturan contohnya kejatuhan benda tajam atau berat yang sekiranya jika tidak menggunakan pelindung akan berdampak fatal pada kepala personil proyek. Selain benturan, helm juga digunakan untuk melindungi kepala penggunanya dari percikan api dan berbagai bentuk serpihan terbang yang biasa ada di lokasi kerja.\cite{k3_mutiaramutu}
 Adanya aturan penggunaan helm di suatu proyek konstruksi dengan dasar K3 belum tentu menjamin penggunaan efektif dari helm proyek tersebut. 
 Berdasarkan Data Kecelakaan dan Penyakit Akibat Kerja Triwulan II 2020 dari Kemnaker, kecelakaan kerja Tipe A yang meliputi "Terbentur pada umumnya menunjukan kontak atau persinggungan dengan benda tajam atau benda keras yang menyebabkan tergores, terpotong, tertusuk dll" mencapai angka 878 kecelakaan dimana menjadi angka terbesar dibanding tipe kecelakaan lain dengan Tipe J (lain-lain) dengan angka 637 dan Tipe C (terjepit) dengan angka 439 \cite{satudata_kecelakaan_kerja}.
-Pengawasan terhadap penerapan Keselamatan Kesehatan Kerja pada suatu proyek seperti menggunakan helm Hard Hat secara konvensional sudah sering dilakukan. Personil pengawas yang dikerahkan untuk memastikan para pekerja di suatu proyek mematuhi aturan keselamatan kerja. Misalnya pengawas ditugaskan untuk mengingatkan pekerja proyek yang tidak menggunakan helm proyek dengan tepat atau bahkan tidak digunakan sama sekali.\cite{li2020deep}
+Pengawasan terhadap penerapan Keselamatan Kesehatan Kerja pada suatu proyek seperti menggunakan helm Hard Hat secara konvensional sudah sering dilakukan. Personil pengawas yang dikerahkan untuk memastikan para pekerja di suatu proyek mematuhi aturan keselamatan kerja. Misalnya pengawas ditugaskan untuk mengingatkan pekerja proyek yang tidak menggunakan helm proyek dengan tepat atau bahkan tidak digunakan sama sekali.\cite{li2020deep} \cite{masrully2019menakar}
 
 \subsection{Permasalahan}
 \label{sec:permasalahan}
 
-Disebutkan pada latar belakang bahwa pengawasan konvensional menggunakan personel manusia untuk menjadi pengawas akan penggunaan helm proyek sebagai APD Keselamatan dan Kesehatan Kerja. Tetapi, teruntuk lokasi proyek konstruksi yang luas dan dengan jumlah pekerja proyek yang banyak menjadikan pengawasan hal yang sulit untuk dilakukan oleh pengawas atau supervisor manusia. Maka dari itu ditarik permasalahan yaitu perlu adanya metode efektif untuk melakukan pengawasan terhadap penggunaan helm proyek secara otomatis. 
+Disebutkan pada latar belakang bahwa pengawasan konvensional menggunakan personel manusia untuk menjadi pengawas akan penggunaan helm proyek sebagai APD Keselamatan dan Kesehatan Kerja. Tetapi, teruntuk lokasi proyek konstruksi yang luas dan dengan jumlah pekerja proyek yang banyak menjadikan pengawasan hal yang sulit untuk dilakukan oleh pengawas atau supervisor manusia. Maka dari itu ditarik permasalahan yaitu Helm keselamatan kerja sebagai salah satu APD K3 masih sering diabaikan ditambah dengan pengawasan penggunaan helm sebagai APD K3 yang masih dilakukan secara manual oleh petugas pengawas. 
 
-\subsection{Tujuan}
+
+\subsection{Penelitian Terkait}
+Terdapat beberapa penelitian yang sudah dilakukan sebelumnya yang berkaitan dengan penelitian ini yaitu seperti
+\emph{Deep Learning Based Safety Helmet Detection in Engineering Management Based on Convolutional Neural Networks} yang dilakukan oleh
+Li dan teman teman pada tahun 2020 tentang metode deteksi helm keselamatan kerja secara real time berbasis deep learning pada lokasi konstruksi. Li dan teman – teman menggunakan SSD-MobileNet yang berbasis dari CNN. Menggunakan dataset yang berjumlah 3261 gambar helm keselamatan. SSD- Mobilenet dipilih dibanding R-CNN dengan maksud pendeteksian yang lebih cepat dan cocok untuk real – time walau tidak seakurat R-CNN. \cite{li2020deep}
+Lalu Deteksi Penggunaan Helm Pada Pengendara Bermotor Berbasis Deep Learning 
+oleh Yusuf Umar pada tahun 2020 yang melakukan penelitian tentang deteksi penggunaan helm pada pengendara bermotor. Pada penelitiannya menggunakan YOLOv3 yang berbasis dari CNN. Pada sistem yang dikembangkan dapat memberikan bounding box ke pengendara lalu dalam bounding box pengendara terdapat boundbox lain dari kepala hingga dada pengendara untuk mendeteksi penggunaan helm motor ada atau tidak. \cite{hanafi2020deteksi}
+Dan juga \emph{Safety Helmet Detection Based on YOLOv5} oleh Zhou dan teman - teman pada awal tahun 2021 yang berupa penelitian deteksi helm keselamatan kerja yang berbasis dari YOLOv5. Pada penelitiannya Zhou dan teman - teman melakukan perbandingan dengan 4 model dari YOLOv5 yang meliputi YOLOv5s, YOLOv5m, YOLOv5l, dan YOLOv5. Selain itu Zhou dan teman - teman menggunakan dataset yang berisi 6054 gambar yang dikumpulkan dari
+internet dan di anotasi sendiri. Label anotasinya ada dua yaitu "Alarm" yang merupakan kepala tanpa helm dan
+"helmet" yang merupakan kepala dengan helm keselamatan kerja\cite{zhou_zhao_nie_2021}.
+
+\subsection{Gap Penelitian}
+Pada penelitian \emph{Deep Learning-Based Safety Helmet Detection in Engineering Management Based on Convolutional Neural Networks} oleh Li dan kawan - kawan , pendeteksian hanya mendeteksi helm keselamatannya sendiri tetapi belum mendeteksi personel yang tidak menggunakan helm keselamatan. Selain itu, Li dan kawan - kawan tidak menggunakan YOLO dalam penelitiannya dan memilih menggunakan SSD-MobileNet.
+\par Pada penelitian Deteksi Penggunaan Helm Pada Pengendara Bermotor Berbasis Deep Learning oleh Yusuf Umar hanya diimplementasikan pada deteksi helm pada pengendara bermotor dan belum untuk helm proyek. Sekiranya metode yang akan digunakan untuk pengembangan sama tetapi dataset yang digunakan akan berbeda.
+\par Pada penelitian \emph{Safety Helmet Detection Based on YOLOv5} oleh Zhou dan teman - teman melakukan deteksi pada pengguna helm keselamatan kerja dan yang tidak. Tetapi dari hasil deteksi ini belum ada tindak lanjut dari hasil output jika
+sekiranya terdapat personel yang tidak menggunakan helm keselamatan kerja. 
+
+
+\subsection{Tujuan Penelitian}
 \label{sec:Tujuan}
 
-Dari permasalahan yang disebutkan, dapat dapat ditentukan tujuan :
-
-\begin{enumerate}[nolistsep]
-
-  \item Merancang sistem yang dapat mendeteksi pekerja proyek yang menggunakan helm proyek dan yang tidak menggunakan helm proyek secara otomatis
-  \item Memicu alarm jika terdeteksi adanya personnel yang tidak menggunakan helm keselamatan kerja dengan benar.
-
-\end{enumerate}
-
+Dari permasalahan yang disebutkan, dapat dapat ditentukan tujuan yaitu merancang sistem yang dapat mendeteksi penggunaan helm keselamatan kerja secara real-time.
 % \subsection{Batasan Masalah}
 % \label{sec:batasanmasalah}
 
@@ -48,22 +58,5 @@ Dari permasalahan yang disebutkan, dapat dapat ditentukan tujuan :
 
 % \end{enumerate}
 
-\subsection{Penelitian Terkait}
-\begin{enumerate}
-  \item \emph{Deep Learning Based Safety Helmet Detection in Engineering Management Based on Convolutional Neural Networks} 
-  \par Li dan teman teman pada tahun 2020 melakukan penelitian tentang metode deteksi helm keselamatan kerja secara real time berbasis deep learning pada lokasi konstruksi. Li dan teman – teman menggunakan SSD-MobileNet yang berbasis dari CNN. Menggunakan dataset yang berjumlah 3261 gambar helm keselamatan. SSD- Mobilenet dipilih dibanding R-CNN dengan maksud pendeteksian yang lebih cepat dan cocok untuk real – time walau tidak seakurat R-CNN. \cite{li2020deep}
-  
-  \item Deteksi Penggunaan Helm Pada Pengendara Bermotor Berbasis Deep Learning 
-  \par Yusuf Umar pada tahun 2020 melakukan penelitian tentang deteksi penggunaan helm pada pengendara bermotor. Pada penelitiannya menggunakan YOLOv3 yang berbasis dari CNN. Pada sistem yang dikembangkan dapat memberikan bounding box ke pengendara lalu dalam bounding box pengendara terdapat boundbox lain dari kepala hingga dada pengendara untuk mendeteksi penggunaan helm motor ada atau tidak. \cite{hanafi2020deteksi}
 
-  \item \emph{Safety Helmet Detection Based on YOLOv5}
-  \par Zhou dan teman - teman pada awal tahun 2021 melakukan penelitian deteksi helm keselamatan kerja yang berbasis dari YOLOv5. Pada penelitiannya Zhou dan teman - teman melakukan perbandingan dengan 4 model dari YOLOv5 yang meliputi YOLOv5s, YOLOv5m, YOLOv5l, dan YOLOv5. Selain itu Zhou dan teman - teman menggunakan dataset yang berisi 6054 gambar yang dikumpulkan dari
-  internet dan di anotasi sendiri. Label anotasinya ada dua yaitu "Alarm" yang merupakan kepala tanpa helm dan
-  "helmet" yang merupakan kepala dengan helm keselamatan kerja\cite{zhou_zhao_nie_2021}.
-\end{enumerate}
 
-\subsection{Gap Penelitian}
-Pada penelitian \emph{Deep Learning-Based Safety Helmet Detection in Engineering Management Based on Convolutional Neural Networks} oleh Li dan kawan - kawan , pendeteksian hanya mendeteksi helm keselamatannya sendiri tetapi belum mendeteksi personel yang tidak menggunakan helm keselamatan. Selain itu, Li dan kawan - kawan tidak menggunakan YOLO dalam penelitiannya dan memilih menggunakan SSD-MobileNet.
-\par Pada penelitian Deteksi Penggunaan Helm Pada Pengendara Bermotor Berbasis Deep Learning oleh Yusuf Umar hanya diimplementasikan pada deteksi helm pada pengendara bermotor dan belum untuk helm proyek. Sekiranya metode yang akan digunakan untuk pengembangan sama tetapi dataset yang digunakan akan berbeda.
-\par Pada penelitian \emph{Safety Helmet Detection Based on YOLOv5} oleh Zhou dan teman - teman melakukan deteksi pada pengguna helm keselamatan kerja dan yang tidak. Tetapi dari hasil deteksi ini belum ada tindak lanjut dari hasil output jika
-sekiranya terdapat personel yang tidak menggunakan helm keselamatan kerja. 
